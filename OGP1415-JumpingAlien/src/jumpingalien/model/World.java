@@ -725,8 +725,6 @@ public class World {
                         else{
                                 slime.end(Action.MOVERIGHT);
                                 slime.start(Action.MOVELEFT);
-                       
-                       
                     }
                     }
                    

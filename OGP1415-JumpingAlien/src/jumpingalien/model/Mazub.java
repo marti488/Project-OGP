@@ -7,7 +7,7 @@ import be.kuleuven.cs.som.annotate.*;
 public class Mazub extends Entities{
        
         private final double startVelocity, baseacceleration, maxVelocityStanding, maxVelocityDucking;
-       
+        private boolean isImmune;
         /**
          *
          * @param pixelLeftX
@@ -61,6 +61,15 @@ public class Mazub extends Entities{
                 System.out.println(pixelLeftX);
                 if (pixelBottomY != this.getminY())
                         this.setJumpAcceleration(this.jumpStartAcceleration);
+        }
+        
+        @Basic
+        public boolean getIsImmune(){
+        	return this.isImmune;
+        }
+        
+        public void setIsImmune(boolean a){
+        	this.isImmune = a;
         }
        
         @Basic
