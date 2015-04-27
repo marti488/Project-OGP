@@ -128,14 +128,14 @@ public class Facade implements IFacadePart2{
  
         @Override
         public boolean isGameOver(World world) {
-                // TODO Auto-generated method stub
-                return false;
+                return world.gameover();
+                //TODO
         }
  
         @Override
         public boolean didPlayerWin(World world) {
-                // TODO Auto-generated method stub
-                return false;
+                return world.hasplayerwon();
+                //TODO
         }
  
         @Override
@@ -146,9 +146,6 @@ public class Facade implements IFacadePart2{
  
         @Override
         public int[] getVisibleWindow(World world) {
-       
-                // TODO Auto-generated method stub
-               
                 return world.getVisibleWindow();
         }
  
@@ -252,13 +249,13 @@ public class Facade implements IFacadePart2{
  
         @Override
         public School createSchool(){
-                // TODO Auto-generated method stub
-                return null;
+                School school =new School();
+                return school;
         }
  
         @Override
         public Slime createSlime(int x, int y, Sprite[] sprites, School school) {
-                school =new School();
+               
                 Slime slime = new Slime(x,y,sprites,school);
                 slime.getSchool().addslimetoschool(slime);
                 return slime;

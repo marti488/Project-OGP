@@ -4,9 +4,9 @@ import java.util.ArrayList;
  
 public class School{
         private int amountslimes;
-        private ArrayList<Slime> slimes = new ArrayList();
+        private ArrayList<Slime> slimes = new ArrayList<Slime>();
         public School(){
-                this.amountslimes=0;           
+                this.setamountslimes(0);               
         }
         public void setamountslimes(int amountslimes){
                 this.amountslimes = amountslimes;
@@ -25,6 +25,10 @@ public class School{
                 slimes.add(slime);
                 this.setslimes(slimes);
                 this.setamountslimes(this.getamountslimes()+1);
-        }//TODO remove slime from school
+        }
+        public void removeslime(Slime slime){
+                this.getslimes().remove(this.getslimes().indexOf(slime));//TODO remove slime from school
+                this.setamountslimes(this.getamountslimes()-1);
+        }
  
 }
