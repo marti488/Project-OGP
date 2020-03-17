@@ -24,7 +24,7 @@ public class World {
          *              |     ,this.getMazub().getXCord()+this.getMazub().getSizeX(), this.getMazub().getSizeY()+this.getMazub().getYCord())
          */
         public boolean hasplayerwon(){
-        		int playerOne = 3;
+        		int playerOne = 5;
                 int x= this.getMazub().getXCord();
                 int y = this.getMazub().getYCord();
                 int xsize = this.getMazub().getSizeX();
